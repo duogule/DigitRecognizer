@@ -123,7 +123,10 @@ public class DigitRecognizer extends Application {
 
         // Clear current canvas for new drawings
         buttonClear.setOnAction(
-                event -> clear(graphicsContext)
+                event -> {
+                    clear(graphicsContext);
+                    labelDigit.setText("");
+                }
         );
 
         // HBox for three buttons
